@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+        <title>CSS Architecture Preview | Homelab 101</title>
+        <meta name="description"
+            content="Preview of the Homelab 101 CSS system.">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">Homelab 101</a>
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="hardware.html">Pick Your Hardware</a></li>
+                    <li><a href="projects.html">Your First Project</a></li>
+                    <li><a href="safety.html">Stay Safe</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <h1>CSS Architecture Preview</h1>
+            <p>
+                A temporary page that shows every pattern in the Homelab 101 CSS system. 
+                Real pages replace it later.
+            </p>
+            <p>
+                Nav links point to pages built later.
+            </p>
+            <a class="cta" href="#project-media">Start here</a>
+
+            <h2>Section cards</h2>
+            <div class="home-cards">
+                <div class="card">
+                    <h3>Pick Your Hardware</h3>
+                    <p>
+                        Compare an old laptop, a mini PC, and a NAS by Cost, power use, and noise. 
+                    </p>
+                    <a href="hardware.html">See starter hardware</a>
+                </div>
+                <div class="card">
+                    <h3>Your First Project</h3>
+                    <p>
+                        Set up a media server or a game server with a step by step walkthrough.
+                    </p>
+                    <a href="projects.html">Pick a first project</a>
+                </div>
+                <div class="card">
+                    <h3>Stay Safe</h3>
+                    <p>
+                        Learn the habits that protect your homelab before anything goes online.
+                    </p>
+                    <a href="safety.html">Read the safety basics</a>
+                </div>
+                <div class="card">
+                    <h3>Glossary</h3>
+                    <p>
+                        Look up terms like NAS, container, VM, and port forwarding. 
+                    </p>
+                    <a href="glossary.html">Browse the glossary</a>
+                </div>
+                <div class="card">
+                    <h3>Resources</h3>
+                    <p>
+                        Truested next steps, official docs, and image credits. 
+                    </p>
+                    <a href="resources.html">See resources</a>
+                </div>
+            </div>
+
+            <h2>Callouts</h2>
+            <div class="callout-note">
+                <p><strong>Before you start</strong></p>
+                <p>
+                    Read <a href="safety.html">Stay Safe</a>
+                    before you open any port to the internet.
+                </p>
+            </div>
+            <div class="callout-warning">
+                <p><strong>Warning</strong></p>
+                <p>
+                    Never expose your router's admin page to the internet.
+                </p>
+            </div>
+        </main>
+    </body>
+</html>
