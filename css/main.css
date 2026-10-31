@@ -1,0 +1,15 @@
+/* Homelab 101 main stylesheet - Layer order is set once, here. 
+Earlier layer = lower priority. Every rule lives in a layer. */
+
+@layer reset, tokens, base, layout,
+components, states, utilities, overrides, print;
+
+@import url("reset.css") layer(reset);
+@import url("tokens.css") layer(tokens);
+@import url("base.css") layer(base);
+@import url("layout.css") layer(layout);
+@import url("components.css") layer(components);
+@import url("states.css") layer(states);
+@import url("utilities.css") layer(utilities);
+@import url("overrides.css") layer(overrides);
+@import url("print.css") layer(print) print;
