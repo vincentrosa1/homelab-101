@@ -1,0 +1,88 @@
+/* First draft so this will be quick styles, no system just yet */
+
+body {
+    margin: 0;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #16202b;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #7a8594;
+    padding: 16px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #16202b;
+    text-decoration: none;
+    padding: 8px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header nav ul li a:active {
+    font-weight: bold;
+    text-decoration: underline; 
+}
+
+.cta {
+    display: inline-block;
+    background: #0b6e6e;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cta:hover {
+    background: #084f4f;
+}
+
+.home-cards .card {
+    background: #ffffff;
+    border: 1px solid #7a8594;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+.home-cards .card h3 {
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.home-cards .card a {
+    color: #0b6e6e;
+    font-weight: bold;
+}
+
+.callout-note {
+    background: #ffffff;
+    border: 1px solid #0b6e6e;
+    border-left: 4px solid #0b6e6e;
+    border-radius: 4px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+}
+
+.callout-warning {
+    background: #ffffff;
+    border: 1px solid #a15c00;
+    border-left: 4px solid #a15c00;
+    border-radius: 4px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+}
