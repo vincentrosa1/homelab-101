@@ -1,1 +1,12 @@
 /* STATES */
+
+/* Focus: one ring for everything */
+:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+}
+
+/* Target: jump to heading */
+:is(h2, h3, h4, dt):target {
+    background: var(--color-highlight);
+}
