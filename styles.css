@@ -1,18 +1,5 @@
 /* First draft so this will be quick styles, no system just yet */
 
-.cta {
-    display: inline-block;
-    background: #0b6e6e;
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.cta:hover {
-    background: #084f4f;
-}
 
 .home-cards .card {
     background: #ffffff;

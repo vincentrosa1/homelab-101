@@ -26,6 +26,17 @@
  }
 
 
+/* Button hover, focus, active */
+.button:hover,
+.button:focus-visible {
+    --button-bg: var(--color-link-hover);
+}
+
+.button:active {
+    --button-bg: var(--color-text);
+}
+
+
 /* Target: jump to heading */
 :is(h2, h3, h4, dt):target {
     background: var(--color-highlight);

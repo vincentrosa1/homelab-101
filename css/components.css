@@ -68,3 +68,22 @@
     font-weight: var(--weight-bold);
     translate: 0 -200%;
 }
+
+
+/* Button */
+.button {
+    --button-bg: var(--color-accent);
+    --button-text: var(--color-on-accent);
+
+    display: inline-flex;
+    align-items: center;
+    min-block-size: var(--tap-target);
+    padding: var(--space-2xs) var(--space-m);
+    border: var(--border-width) solid var(--button-bg);
+    background: var(--button-bg);
+    color: var(--button-text);
+    font-weight: var(--weight-bold);
+    text-decoration: none;
+}
+
+
