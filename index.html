@@ -25,18 +25,24 @@
             </nav>
         </header>
 
-        <main id="main">
-            <h1>CSS Architecture Preview</h1>
-            <p>
+        <main id="main" class="l-container">
+            <section class="l-section u-flow" 
+            aria-labelledby="intro-title"></section>
+            <h1 id="intro-title">CSS Architecture Preview</h1>
+            <p class="u-measure">
                 A temporary page that shows every pattern in the Homelab 101 CSS system. 
                 Real pages replace it later.
             </p>
-            <p>
+            <p class="u-measure">
                 Nav links point to pages built later.
             </p>
             <a class="cta" href="#project-media">Start here</a>
+            </section>
 
-            <h2>Section cards</h2>
+
+            <section class="l-section u-flow" 
+            aria-labelledby="cards-title">
+            <h2 id="cards-title">Section cards</h2>
             <div class="home-cards">
                 <div class="card">
                     <h3>Pick Your Hardware</h3>
@@ -74,8 +80,11 @@
                     <a href="resources.html">See resources</a>
                 </div>
             </div>
+            </section>
 
-            <h2>Callouts</h2>
+            <section class="l-section u-flow"
+            aria-labelledby="callouts-title">
+            <h2 id="callouts-title">Callouts</h2>
             <div class="callout-note">
                 <p><strong>Before you start</strong></p>
                 <p>
@@ -89,6 +98,7 @@
                     Never expose your router's admin page to the internet.
                 </p>
             </div>
+            </section>
         </main>
     </body>
 </html>

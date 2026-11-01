@@ -1,1 +1,57 @@
 /* LAYOUT */
+
+/* page structire primitives (l- prefix) */
+
+.l-container {
+    max-inline-size: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+}
+
+.l-section {
+    padding-block: var(--section-space);
+}
+
+.l-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: var(--cluster-justify, flex-start);
+    gap: var(--cluster-gap, var(--space-s));
+}
+
+.l-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--grid-gap, var(--space-m));
+}
+
+.l-sidebar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-l);
+}
+
+@media (min-width: 40rem) {
+    .l-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 64rem) {
+    .l-grid--3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .l-sidebar {
+        grid-template-columns: var(--sidebar) minmax(0, 1fr);
+        align-items: start;
+     }
+}
+
+@media (min-width: 64rem) and (min-height: 32rem) {
+    .l-sidebar__aside {
+        position: sticky;
+        inset-block-start: var(--space-s);
+    }
+}
