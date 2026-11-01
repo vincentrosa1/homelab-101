@@ -1,1 +1,21 @@
 /* UTILITIES */
+
+/* Hidden on screen, still read by screen readers */
+.u-visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* Even space between staced children */
+.u-flow > * + * {
+    margin-block-start: var(--flow-space, var(--space-s));
+}
+
+/* Readable line length */
+.u-measure {
+    max-inline-size: var(--measure);
+}
