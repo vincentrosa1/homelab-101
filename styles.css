@@ -1,23 +1,6 @@
 /* First draft so this will be quick styles, no system just yet */
 
 
-.home-cards .card {
-    background: #ffffff;
-    border: 1px solid #7a8594;
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 16px;
-}
-
-.home-cards .card h3 {
-    font-size: 22px;
-    margin-top: 0;
-}
-
-.home-cards .card a {
-    color: #0b6e6e;
-    font-weight: bold;
-}
 
 .callout-note {
     background: #ffffff;

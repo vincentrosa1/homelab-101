@@ -6,7 +6,7 @@
             content="width=device-width, initial-scale=1">
         <title>CSS Architecture Preview | Homelab 101</title>
         <meta name="description"
-            content="Preview of the Homelab 101 CSS system.">|
+            content="Preview of the Homelab 101 CSS system.">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="styles.css">
     </head>
@@ -18,7 +18,7 @@
             <a class="site-header__name" href="index.html">Homelab 101</a>
             <nav class="nav" aria-label="Primary">
                 <ul class="nav__list" role="list">
-                    <li><a class="nav__link" href="index.html">Home</a></li>
+                    <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
                     <li><a class="nav__link" href="hardware.html">Pick Your Hardware</a></li>
                     <li><a class="nav__link" href="projects.html">Your First Project</a></li>
                     <li><a class="nav__link" href="safety.html">Stay Safe</a></li>
@@ -31,7 +31,7 @@
 
         <main id="main" class="l-container">
             <section class="l-section u-flow" 
-            aria-labelledby="intro-title"></section>
+            aria-labelledby="intro-title">
             <h1 id="intro-title">CSS Architecture Preview</h1>
             <p class="u-measure">
                 A temporary page that shows every pattern in the Homelab 101 CSS system. 
@@ -47,43 +47,43 @@
             <section class="l-section u-flow" 
             aria-labelledby="cards-title">
             <h2 id="cards-title">Section cards</h2>
-            <div class="home-cards">
-                <div class="card">
-                    <h3>Pick Your Hardware</h3>
+            <ul class="l-grid l-grid--3" role="list">
+                <li class="card">
+                    <h3 class="card__title">Pick Your Hardware</h3>
                     <p>
-                        Compare an old laptop, a mini PC, and a NAS by Cost, power use, and noise. 
+                        Compare an old laptop, a mini PC, and a NAS by cost, power use, and noise. 
                     </p>
-                    <a href="hardware.html">See starter hardware</a>
-                </div>
-                <div class="card">
-                    <h3>Your First Project</h3>
+                    <a class="card__link" href="hardware.html">See starter hardware</a>
+                </li>
+                <li class="card">
+                    <h3 class="card__title">Your First Project</h3>
                     <p>
                         Set up a media server or a game server with a step by step walkthrough.
                     </p>
-                    <a href="projects.html">Pick a first project</a>
-                </div>
-                <div class="card">
-                    <h3>Stay Safe</h3>
+                    <a class="card__link" href="projects.html">Pick a first project</a>
+                </li>
+                <li class="card">
+                    <h3 class="card__title">Stay Safe</h3>
                     <p>
                         Learn the habits that protect your homelab before anything goes online.
                     </p>
-                    <a href="safety.html">Read the safety basics</a>
-                </div>
-                <div class="card">
-                    <h3>Glossary</h3>
+                    <a class="card__link" href="safety.html">Read the safety basics</a>
+                </li>
+                <li class="card">
+                    <h3 class="card__title">Glossary</h3>
                     <p>
                         Look up terms like NAS, container, VM, and port forwarding. 
                     </p>
-                    <a href="glossary.html">Browse the glossary</a>
-                </div>
-                <div class="card">
-                    <h3>Resources</h3>
+                    <a class="card__link" href="glossary.html">Browse the glossary</a>
+                </li>
+                <li class="card">
+                    <h3 class="card__title">Resources</h3>
                     <p>
-                        Truested next steps, official docs, and image credits. 
+                        Trusted next steps, official docs, and image credits. 
                     </p>
-                    <a href="resources.html">See resources</a>
-                </div>
-            </div>
+                    <a class="card__link" href="resources.html">See resources</a>
+                </li>
+            </ul>
             </section>
 
             <section class="l-section u-flow"

@@ -80,6 +80,7 @@
     min-block-size: var(--tap-target);
     padding: var(--space-2xs) var(--space-m);
     border: var(--border-width) solid var(--button-bg);
+    border-radius: var(--radius-sm);
     background: var(--button-bg);
     color: var(--button-text);
     font-weight: var(--weight-bold);
@@ -87,3 +88,25 @@
 }
 
 
+/* Card */
+.card {
+    --card-padding: var(--space-m);
+    --card-radius: var(--radius-md);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--card-padding);
+    border: var(--border);
+    border-radius: var(--card-radius);
+    background: var(--color-surface);
+}
+
+.card__title {
+    font-size: var(--step-1);
+}
+
+.card__link {
+    margin-block-start: auto;
+    font-weight: var(--weight-bold);
+}
