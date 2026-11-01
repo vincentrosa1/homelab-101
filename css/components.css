@@ -150,3 +150,47 @@
 .site-footer__ inner {
     --cluster-justfiy: space-between;
 }
+
+/* Data table */
+.data-table__hint {
+    margin-block-end: var(--space-2xs);
+    color: var(--color-muted);
+    font-size: var(--step--1);
+}
+
+.data-table__scroll {
+    overflow-x: auto;
+    border: var(--border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+}
+
+.data-table table {
+    inline-size: 100%;
+    min-inline-size: 36rem;
+    font-size: var(--step--1);
+}
+
+.data-table caption {
+    padding: var(--space-xs) var(--space-s);
+    font-weight: var(--weight-bold);
+    text-align: start;
+}
+
+.data-table th, 
+.data-table td {
+    padding: var(--space-2xs) var(--space-s);
+    border-block-start: var(--border);
+    text-align: start;
+    vertical-align: top;
+}
+
+.data-table thead th {
+    background: var(--color-bg);
+}
+
+@media (min-width: 40rem) {
+    .data-table__hint {
+        display: none;
+    }
+}
