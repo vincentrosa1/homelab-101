@@ -6,6 +6,11 @@
     outline-offset: var(--focus-offset);
 }
 
+/* Skip link shows on focus */
+.skip-link:focus {
+    translate: 0 0;
+}
+
  /* Nav hover matches focus */
  .nav__link:hover, 
  .nav__link:focus-visible {

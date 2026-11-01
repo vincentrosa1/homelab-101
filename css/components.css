@@ -56,3 +56,15 @@
         justify-content: flex-end;
     }
 }
+
+/* Skip link */
+.skip-link {
+    position: absolute;
+    inset-block-start: var(--space-s);
+    inset-inline-start: var(--space-s);
+    z-index: 10;
+    padding: var(--space-2xs) var(--space-s);
+    background: var(--color-surface);
+    font-weight: var(--weight-bold);
+    translate: 0 -200%;
+}
