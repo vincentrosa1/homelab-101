@@ -135,3 +135,18 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
+
+/* Site footer */
+.site-footer {
+    margin-block-start: var(--section-space);
+    padding-block: var(--space-l);
+    border-block-start: var(--border);
+    background: var(--color-surface);
+    color: var(--color-muted);
+    font-size: var(--step--1); 
+}
+
+
+.site-footer__ inner {
+    --cluster-justfiy: space-between;
+}
