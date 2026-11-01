@@ -1,1 +1,71 @@
 /* PRINT */
+
+/* Swap tokens to ink-friendly values */
+:root {
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-text: #000000;
+    --color-muted: #333333;
+    --color-border: #555555;
+    --color-link: #000000;
+    --color-link-visited: #000000;
+    --color-code-bg: #ffffff;
+    --color-code-text: #000000;
+    --section-space: 1.5rem;
+}
+
+body {
+    font-size: 11pt;
+    line-height: 1.5;
+}
+
+/* Hide screen only navigation */
+.skip-link,
+.nav,
+.button,
+.data-table__hint,
+.l-sodebar__aside {
+    display: none;
+}
+
+/* One column on paper */
+.l-sidebar {
+    display: block;
+}
+
+
+/* long commands wrap not cut off */
+.code-block {
+    border: var(--border);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Table prints in full */
+.data-table__scroll {
+    overflow: visible;
+}
+
+.data-table table {
+    min-inline-size: 0;
+}
+
+thead {
+    display: table-header-group;
+}
+
+/* Keep pieces together */
+pre, figure, tr, li, .card, .callout {
+    break-inside: avoid;
+}
+
+h2, h3, h4 {
+    break-after: avoid;
+}
+
+/* Show where external links go */
+a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    overflow-wrap: anywhere;
+}
