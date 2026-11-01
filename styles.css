@@ -1,34 +1,5 @@
 /* First draft so this will be quick styles, no system just yet */
 
-header {
-    background: #ffffff;
-    border-bottom: 1px solid #7a8594;
-    padding: 16px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 0;
-}
-
-header nav ul li a {
-    color: #16202b;
-    text-decoration: none;
-    padding: 8px;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-header nav ul li a:active {
-    font-weight: bold;
-    text-decoration: underline; 
-}
-
 .cta {
     display: inline-block;
     background: #0b6e6e;

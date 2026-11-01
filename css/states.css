@@ -6,6 +6,21 @@
     outline-offset: var(--focus-offset);
 }
 
+ /* Nav hover matches focus */
+ .nav__link:hover, 
+ .nav__link:focus-visible {
+    background: var(--color-bg);
+    text-decoration-line: underline;
+ }
+
+ .nav__link[aria-current="page"] {
+    font-weight: var(--weight-bold);
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.35em;
+ }
+
+
 /* Target: jump to heading */
 :is(h2, h3, h4, dt):target {
     background: var(--color-highlight);
