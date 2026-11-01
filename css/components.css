@@ -110,3 +110,28 @@
     margin-block-start: auto;
     font-weight: var(--weight-bold);
 }
+
+/* Callout */
+.callout {
+    --callout-color: var(--color-note);
+
+    display: grid;
+    gap: var(--space-2xs);
+    padding: var(--space-s) var(--space-m);
+    border: var(--border-width) solid var(--callout-color);
+    border-inline-start-width: var(--border-width-thick);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+}
+
+.callout--warning {
+    --callout-color: var(--color-warning);
+}
+
+.callout__label {
+    color: var(--callout-color);
+    font-size: var(--step--1);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
