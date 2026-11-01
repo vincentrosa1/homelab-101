@@ -1,1 +1,25 @@
 /* OVERRIDES */
+
+/* Preview only token swatches */
+.preview-swatches {
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+    gap: var(--space-s);
+}
+
+.preview-swatches li {
+    padding: var(--space-xs);
+    border: var(--border);
+    border-block-start: 3rem solid var(--swatch);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    font-size: var(--step--1);
+}
+
+/* Forced colors removes backgrounds, so the targe highlight needs an outline instead */
+@media (forced-colors: active) {
+    :is(h2, h3, h4, dt):target {
+        outline: 2px solid Highlight;
+    }
+}
