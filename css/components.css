@@ -194,3 +194,14 @@
         display: none;
     }
 }
+
+/* Code block */
+.code-block {
+    overflow-x: auto;
+    padding: var(--space-s);
+    border-radius: var(--radius-md);
+    background: var(--color-code-bg);
+    color: var(--color-code-text);
+    font-size: var(--step--1);
+    line-height: 1.5;
+}

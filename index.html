@@ -151,6 +151,59 @@
             </div>
             </div>
             </section>
+        
+            <section class="l-section u-flow"
+            aria-labelledby="article-title">
+            <h2 id="article-title">Article template: Your First Project</h2>
+            <div class="l-sidebar">
+                <nav class="l-sidebar__aside card" aria-label="On this page">
+                    <h3 class="card__title">On this page</h3>
+                    <ul class="u-flow" row="list" style="--flowspace: var(--space-2xs)">
+                        <li><a href="#project-media">Media server</a></li>
+                        <li><a href="#step-update">Update the system</a></li>
+                        <li><a href="#step-install">Install the jellyfin</a></li>
+                        <li><a href="#step-open">Open the dashboard</a></li>
+                    </ul>
+                </nav>
+
+                <article class="u-flow u-measure">
+                    <h3 id="project-media">Media server</h3>
+                    <p>Difficulty: Easy - Time: about 1 hour</p>
+                    <div class="callout">
+                        <p class="callout__label">Before you start</p>
+                        <p>
+                            Read <a href="safety.html">Stay Safe</a>
+                            before you open any port to the internet. 
+                        </p>
+                    </div>
+
+                    <ol class="u-flow">
+                        <li class="u-flow">
+                            <h4 id="step-update">Update the system</h4>
+                            <pre class="code-block" tabindex="0"><code>sudo apt update && sudo apt upgrade -y</code></pre>
+                        </li>
+                        <li class="u-flow">
+                            <h4 id="step-install">Install Jellyfin</h4>
+                            <p>
+                                Run the install script from 
+                                <a href="https://jellyfin.org/docs/">official docs
+                                    <span class="u-visually-hidden"> (external site)</span>
+                                </a>
+                            </p>
+                            <pre class="code-block" tabindex="0"><code>curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash</code></pre>
+                        </li>
+                        <li class="u-flow">
+                            <h4 id="step-open">Open the dashboard</h4>
+                            <p>
+                                On another device, go to 
+                                <code>http://SERVER-IP:8096</code>.
+                            </p>
+                        </li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+        
         </main>
 
         <footer class="site-footer">
