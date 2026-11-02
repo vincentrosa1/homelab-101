@@ -147,8 +147,8 @@
 }
 
 
-.site-footer__ inner {
-    --cluster-justfiy: space-between;
+.site-footer__inner {
+    --cluster-justify: space-between;
 }
 
 /* Data table */
