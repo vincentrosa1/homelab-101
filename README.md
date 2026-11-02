@@ -106,13 +106,15 @@ Breakpoints are mobile first: base styles are narrow `min-width: 40rem` is mediu
       visible
 - [X] CSS disabled: content reads in a logical order
 - [X] DevTools Styles shows the layer order
-- [ ] W3C HTML and CSS validators pass
+- [X] W3C HTML and CSS validators pass
 
 ## Known gaps
 
 - Nav links point to pages to be built later
 - Table values and commands are placeholders until the real 
     Pick Your Hardware and Your First Project pages. 
+- The w3C validator wanrs that `role="list"` is uneccesary on `ul`. It's kept on purpose. 
+    VoiceOver drops list semantics when `list-style: none` is set. 
 
 ## AI Disclosure
 - No AI was used
