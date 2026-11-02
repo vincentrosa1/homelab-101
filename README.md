@@ -3,7 +3,7 @@
 The first production CSS system for Homelab 101, a beginner's guide to building a homelab.
 `index.html` is a temporary preview page that shows every pattern. Real pages will replace it later. 
 
-**Preview site:** 
+**Preview site:** - https://vincentrosa1.github.io/homelab-101/ 
 
 ## File Structure
 
