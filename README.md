@@ -113,7 +113,7 @@ Breakpoints are mobile first: base styles are narrow `min-width: 40rem` is mediu
 - Nav links point to pages to be built later
 - Table values and commands are placeholders until the real 
     Pick Your Hardware and Your First Project pages. 
-- The w3C validator wanrs that `role="list"` is uneccesary on `ul`. It's kept on purpose. 
+- The W3C validator warns that `role="list"` is uneccesary on `ul`. It's kept on purpose. 
     VoiceOver drops list semantics when `list-style: none` is set. 
 
 ## AI Disclosure
