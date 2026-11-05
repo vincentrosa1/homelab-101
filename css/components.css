@@ -46,7 +46,9 @@
     }
 }
 
-@media (min-width: 64rem) {
+
+/* Content driven - site name plus the one row nav fit side by side from about 56rem */
+@media (min-width: 56rem) {
     .site-header__inner {
         grid-template-columns: auto 1fr;
         align-items: center;
