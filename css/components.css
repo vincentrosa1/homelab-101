@@ -189,6 +189,10 @@
     background: var(--color-bg);
 }
 
+/* Content-driven: hide the hint once the 36rem table fits
+without scrolling */
+
+
 @media (min-width: 40rem) {
     .data-table__hint {
         display: none;
