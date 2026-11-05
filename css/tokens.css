@@ -81,3 +81,15 @@
 --focus-offset: 2px;
 --focus-ring: var(--focus-width) solid var(--color-focus);
 }
+
+
+/* More contrast - swaping tokens, the same way print.css does */
+@media (preferes-contrast: more) {
+    :root {
+        --color-muted: var(--slate-900);
+        --color-border: var(--slate-900);
+        --color-link: var(--teal-800);
+        --color-link-hover: var(--slate-900);
+        --border-width: 2px;
+    }
+}
