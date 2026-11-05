@@ -139,21 +139,21 @@ The old 40rem / 64rem card grid queries were removed.
 
 ### Layout testing
 
-- [] Narrow (320px): 1 card column, nav 3 x 2, 
+- [X] Narrow (320px): 1 card column, nav 3 x 2, 
     callouts stacked, no page sideways scroll
-- [] Medium (768px): 2 card columns, nav one row
+- [X] Medium (768px): 2 card columns, nav one row
     under the name, TOC above the article, 
     callout labels beside the text
-- [] Wide (1280px): 3 card columns with aligned
+- [X] Wide (1280px): 3 card columns with aligned
     titles, text, and links; nav beside the name;
     sticky TOC
-- [] Container query (~900px): top callouts show 
+- [X] Container query (~900px): top callouts show 
     the label column while the narrow article
     callouts stays stacked
-- [] 200% zoom at 1280px: reflows like 640px
+- [X] 200% zoom at 1280px: reflows like 640px
     (1 column, stacked callouts), nothing clipped,
     no sideways scroll
-- [] Keyboard: skip link first, focus ring on every
+- [X] Keyboard: skip link first, focus ring on every
     link, button, table, and code block; TOC links
     jump to each step
 - [] Preference: DevTools Rendering, emulate
