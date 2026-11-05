@@ -111,6 +111,19 @@
     font-weight: var(--weight-bold);
 }
 
+/* Subgrid: cards in the same grid row share row lines, so titles, text,
+and links line up even when one title wraps longer. Excepts 3 children: 
+title, text, link. Fallback: without subgrid, the card stays a flex
+column. */
+
+@supports (grid-template-rows: subgrid) {
+    .card--subgrid {
+        display: grid;
+        grid-row: span 3;
+        grid-template-rows: subgrid;
+    }
+}
+
 /* Callout - Degault stacks the label over the
 text, which works at any width and is what 
 browsers without container queries get. */
