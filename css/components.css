@@ -111,18 +111,38 @@
     font-weight: var(--weight-bold);
 }
 
-/* Callout */
+/* Callout - Degault stacks the label over the
+text, which works at any width and is what 
+browsers without container queries get. */
+
+
 .callout {
     --callout-color: var(--color-note);
 
-    display: grid;
-    gap: var(--space-2xs);
+    container: callout / inline-size;
     padding: var(--space-s) var(--space-m);
     border: var(--border-width) solid var(--callout-color);
     border-inline-start-width: var(--border-width-thick);
     border-radius: var(--radius-sm);
     background: var(--color-surface);
 }
+
+.callout__body {
+    display: grid;
+    gap: var(--space-2xs);
+}
+
+/* Room for a label column */
+
+
+@container callout (min-inline-size: 36rem) {
+    .callout__body {
+        grid-template-columns: 10rem minmax(0, 1fr);
+        column-gap: var(--space-m);
+        align-items:baseline;
+    }
+}
+
 
 .callout--warning {
     --callout-color: var(--color-warning);
