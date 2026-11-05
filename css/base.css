@@ -5,6 +5,13 @@ html {
     scroll-padding-block-start: var(--space-l);
 }
 
+/* Smooth jump links only for people who haven't asked for less motion */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 body {
     background: var(--color-bg);
     color: var(--color-text);
