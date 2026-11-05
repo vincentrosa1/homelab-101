@@ -60,8 +60,8 @@
 --space-m: 1.5rem;
 --space-l: 2rem;
 --space-xl: 3rem;
---gutter: var(--space-s);
---section-space: var(--space-xl);
+--gutter: clamp(var(--space-s), 0.5rem + 2vw, var(--space-l));
+--section-space: clamp(var(--space-xl), 1rem + 4vw, var(--space-xl));
 --tap-target: 2.75rem;
 
 /* --- Layout --- */
