@@ -39,6 +39,9 @@
 }
 
 
+/* Content driven - the long link labels get cramped in one row, so they sit 
+in a 3 column grid. From 40rem they take natural width */
+
 @media (min-width: 40rem) {
     .nav__list {
         display: flex;
