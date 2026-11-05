@@ -20,11 +20,30 @@
     gap: var(--cluster-gap, var(--space-s));
 }
 
+/* Intrinsic grid: columns come from available space, not breakpoints. */
+
+
+
 .l-grid {
+    --grid-min: 16rem;
+
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--grid-min)), 1fr));
     gap: var(--grid-gap, var(--space-m));
 }
+
+
+
+
+/* Larger minimum caps the section cards at 3 columns in the 75rem container */
+
+
+.l-grid--3 {
+    --grid-min: 18rem;
+}
+
+/* Intrinsic sidebar: the column is only as wide as its links, up to --sidebar */
+
 
 .l-sidebar {
     display: grid;
@@ -32,24 +51,14 @@
     gap: var(--space-l);
 }
 
-@media (min-width: 40rem) {
-    .l-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (min-width: 64rem) {
-    .l-grid--3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
+@media (min-width: 56rem) {
     .l-sidebar {
-        grid-template-columns: var(--sidebar) minmax(0, 1fr);
+        grid-template-columns: fit-content(var(--sidebar)) minmax(0, 1fr);
         align-items: start;
-     }
+    }
 }
 
-@media (min-width: 64rem) and (min-height: 32rem) {
+@media (min-width: 56rem) and (min0height: 32rem) {
     .l-sidebar__aside {
         position: sticky;
         inset-block-start: var(--space-s);
