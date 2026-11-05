@@ -95,15 +95,15 @@ Breakpoints are mobile first and content driven.
 Built inside the existing layers, with no new files
 
 - **Foundation** `.l-container` and `.l-section` use 
-`max-inline-xize`, `margin-inline: auto`, 
+`max-inline-size`, `margin-inline: auto`, 
 `padding-inline`, and `padding-block`, `--gutter`
 and `--section-space` are fluid `clamp()` tokens.
 - **Intrinsic grid 1, `.l-grid`:**
-`repeat(ato-fit, minmax(min(100%, var(--grid-min)), 1fr))`.
+`repeat(auto-fit, minmax(min(100%, var(--grid-min)), 1fr))`.
 Section cards go 1, 2, then 3 columns with no 
 media queries. `min(100%, ...)` prevents overflow
 at 320px.
-- **Intrinsic grid 2, `.sidebar`:**
+- **Intrinsic grid 2, `.l-sidebar`:**
 `fit-content(var(--sidebar)) minmax(0, 1fr)`. The
 Table of Contents is only as wide as its links, up to 14rem.
 - **Subgrid, `.card--subgrid`:** cards share their 
@@ -130,7 +130,7 @@ callout. Both defaults are fully usable.
 |---|---|---| 
 | 40rem | Nav grid to flex row | Six links fit at natural width |
 | 40rem | Table hint hidden | The 36rem table fits without scrolling | 
-| 56rem | Name beside nav | Name plus one-row (~50rem) fit |
+| 56rem | Name beside nav | Name plus one-row nav (~50rem) fit |
 | 56rem | TOC (Table of Contents) sidebar | Article keeps about 36rem beside the TOC | 
 | 36rem (container) | Callout label column | 10rem label plus about 24rem of text |
 
@@ -156,12 +156,12 @@ The old 40rem / 64rem card grid queries were removed.
 - [X] Keyboard: skip link first, focus ring on every
     link, button, table, and code block; TOC links
     jump to each step
-- [] Preference: DevTools Rendering, emulate
+- [X] Preference: DevTools Rendering, emulate
     `prefers-contrast: more`: darker, thicker borders
     and darker muted text
-- [] Preferece: emulate `prefers-reduced-motion: reduce`:
+- [X] Preferece: emulate `prefers-reduced-motion: reduce`:
     jump links jump instantly
-- [] Fallback: delete the `@supports` and 
+- [X] Fallback: delete the `@supports` and 
     `@container` blocks in DevTools: cards and 
     callouts stay readable
 
