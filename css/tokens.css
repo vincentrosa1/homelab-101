@@ -61,7 +61,7 @@
 --space-l: 2rem;
 --space-xl: 3rem;
 --gutter: clamp(var(--space-s), 0.5rem + 2vw, var(--space-l));
---section-space: clamp(var(--space-xl), 1rem + 4vw, var(--space-xl));
+--section-space: clamp(var(--space-l), 1rem + 4vw, var(--space-xl));
 --tap-target: 2.75rem;
 
 /* --- Layout --- */
@@ -84,7 +84,7 @@
 
 
 /* More contrast - swaping tokens, the same way print.css does */
-@media (preferes-contrast: more) {
+@media (prefers-contrast: more) {
     :root {
         --color-muted: var(--slate-900);
         --color-border: var(--slate-900);

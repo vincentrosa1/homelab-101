@@ -58,7 +58,7 @@
     }
 }
 
-@media (min-width: 56rem) and (min0height: 32rem) {
+@media (min-width: 56rem) and (min-height: 32rem) {
     .l-sidebar__aside {
         position: sticky;
         inset-block-start: var(--space-s);
