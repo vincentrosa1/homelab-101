@@ -286,7 +286,7 @@ width and height on each img reserve the space before it loads */
 }
 
 .diagram__node--router {
-    fill: var(--color-hightlight);
+    fill: var(--color-highlight);
 }
 
 .diagram__link {
@@ -305,10 +305,11 @@ width and height on each img reserve the space before it loads */
     stroke-dasharray: 4 4;
 }
 
-.daigram__label {
+.diagram__label {
     fill: var(--color-text);
     font-size: 20px;
     font-weight: var(--weight-bold);
+    text-anchor: middle;
 }
 
 .diagram__label--zone {

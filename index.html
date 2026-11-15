@@ -29,17 +29,62 @@
         </header>
 
         <main id="main" class="l-container">
-            <section class="l-section u-flow" 
+            <section class="l-section" 
             aria-labelledby="intro-title">
-            <h1 id="intro-title">CSS Architecture Preview</h1>
-            <p class="u-measure">
-                A temporary page that shows every pattern in the Homelab 101 CSS system. 
-                Real pages replace it later.
-            </p>
-            <p class="u-measure">
-                Nav links point to pages built later.
-            </p>
-            <a class="button" href="#project-media">Start here</a>
+            <div class="l-split">
+                <div class="u-flow">
+                <h1 id="intro-title">CSS Architecture Preview</h1>
+                <p class="u-measure">
+                    A temporary page that shows every pattern in the Homelab 101 CSS system. 
+                    Real pages replace it later.
+                </p>
+                <p class="u-measure">
+                    Nav links point to pages built later.
+                </p>
+                <a class="button" href="#project-media">Start here</a>
+            </div>
+
+            <figure class="figure figure--diagram">
+                <svg class="diagram" viewBox="0 0 400 420"
+                width="400" height="420"
+                role="img" aria-labelledby="net-title">
+                <title id="net-title">How a basic home network connects</title>
+                <rect class="diagram__zone" x="4" y="100"
+                    width="392" height="312" rx="12"/>
+                <line class="diagram__link"
+                    x1="200" y1="64" x2="200" y2="130"/>
+                <line class="diagram__link" 
+                    x1="200" y1="186" x2="70" y2="290"/>
+                <line class="diagram__link diagram__link--wifi"
+                    x1="200" y1="186" x2="200" y2="290"/>
+                <line class="diagram__link diagram__link--wifi"
+                    x1="200" y1="186" x2="330" y2="290"/>
+                <rect class="diagram__node" x="110" y="8"  
+                    width="180" height="56" rx="28"/>
+                <rect class="diagram__node diagram__node--router"
+                    x="110" y="130" width="180" height="56" rx="8"/>
+                <rect class="diagram__node" x="12" y="290"
+                    width="116" height="56" rx="8"/>
+                <rect class="diagram__node" x="142" y="290"
+                    width="116" height="56" rx="8"/>
+                <rect class="diagram__node" x="272" y="290"
+                    width="116" height="56" rx="8"/>
+                <text class="diagram__label" x="200" y="43">Internet</text>
+                <text class="diagram__label" x="200" y="165">Router</text>
+                <text class="diagram__label" x="70" y="325">Server</text>
+                <text class="diagram__label" x="200" y="325">Phone</text>
+                <text class="diagram__label" x="330" y="325">Laptop</text>
+                <text class="diagram__label diagram__label--zone"
+                   x="200" y="392">Your private network</text> 
+            </svg>
+            <figcaption>
+                The internet reaches your router. The router connects to your 
+                homelab server by Ethernet (solid line) and to your phone and 
+                laptop by Wi-Fi (dashed lines). Everything inside the dashed 
+                box is your private network. 
+            </figcaption>
+            </figure>
+            </div>    
             </section>
 
 
