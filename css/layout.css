@@ -20,6 +20,21 @@
     gap: var(--cluster-gap, var(--space-s));
 }
 
+/* Split: text and a figure side by side once both fit.
+Content driven - at 64rem the text keeps about 29rem 
+next to the 28rem diagram */
+.l-split {
+    display: grid;
+    gap: var(--space-l);
+    align-items: center;
+}
+
+@media (min-width: 64rem) {
+    .l-split {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 /* Intrinsic grid: columns come from available space, not breakpoints. */
 
 

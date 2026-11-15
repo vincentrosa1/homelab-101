@@ -69,3 +69,8 @@ a[href^="http"]::after {
     font-size: 0.85em;
     overflow-wrap: anywhere;
 }
+
+/* A video can't play on paper, so the caption link prints instead */
+.video__frame {
+    display: none;
+}

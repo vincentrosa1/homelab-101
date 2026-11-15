@@ -247,3 +247,103 @@ without scrolling */
     font-size: var(--step--1);
     line-height: 1.5;
 }
+
+/* Figure: photos, diagrams, and screenshots with a caption. 
+width and height on each img reserve the space before it loads */
+.figure {
+    display: grid;
+    gap: var(--space-2xs);
+}
+
+.figure img {
+    inline-size: 100%;
+    border: var(--border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+}
+
+.figure figcaption {
+    max-inline-size: var(--measure);
+    color: var(--color-muted);
+    font-size: var(--step--1);
+}
+
+.figure--diagram svg {
+    inline-size: 100%;
+    max-inline-size: 28rem;
+}
+
+/* Screenshot never stretches past it real width */
+.figure--screenshot {
+    max-inline-size: 61.75rem;
+}
+
+/* Network diagram - colors come from tokens */
+.diagram__node {
+    fill: var(--color-surface);
+    stroke: var(--color-text);
+    stroke-width: 2;
+}
+
+.diagram__node--router {
+    fill: var(--color-hightlight);
+}
+
+.diagram__link {
+    stroke: var(--color-text);
+    stroke-width: 2;
+}
+
+.diagram__link--wifi {
+    stroke-dasharray: 6 6;
+}
+
+.diagram__zone {
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 2;
+    stroke-dasharray: 4 4;
+}
+
+.daigram__label {
+    fill: var(--color-text);
+    font-size: 20px;
+    font-weight: var(--weight-bold);
+}
+
+.diagram__label--zone {
+    fill: var(--color-accent);
+    font-weight: var(--weight-regular);
+}
+
+/* Forced colors - keep the diagram visible in high contrast */
+@media (forced-colors : active) {
+    .diagram__node, 
+    .diagram__link, 
+    .diagram__zone {
+        stroke: CanvasText;
+    }
+
+    .diagram__node {
+        fill: Canvas;
+    }
+
+    .diagram__label {
+        fill: CanvasText;
+    }
+}
+
+/* Video embed - 16:9 space is reserved before the ifram loads */
+.video__frame {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--color-code-bg);
+}
+
+.video__frame iframe {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    border: 0;
+}
