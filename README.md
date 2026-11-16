@@ -23,6 +23,7 @@ docs/
 refactoring-notes.md
 media-and-type.md - asset inventory, alt text, and Module 4 testing
 images/ - WebP photos and screenshot
+
 ## Layer and order strategy
 `main.css` declares the order once:
 
@@ -182,13 +183,14 @@ The old 40rem / 64rem card grid queries were removed.
       visible
 - [X] CSS disabled: content reads in a logical order
 - [X] DevTools Styles shows the layer order
-- [X] W3C HTML and CSS validators pass
+- [X] W3C HTML validator passes; CSS passes except the container query false errors
+    (see known gaps)
 
 
 ## Media and typography (Module 4)
 
 Built on the Module 3 layout, with no new CSS files. Each new piece
-lives in the layer it belongs to :`.l-split` in layout, `.figure`,
+lives in the layer it belongs to: `.l-split` in layout, `.figure`,
 the diagram, and `.video__frame` in components, and one print rule.
 
 - **Network diagram.** Inline SVG in the intro, so it uses my color
@@ -220,7 +222,9 @@ The full asset inventory, alt text, and testing are in
 - Table values and commands are placeholders until the real 
     Pick Your Hardware and Your First Project pages. 
 - The W3C validator warns that `role="list"` is uneccesary on `ul`. It's kept on purpose. 
-    VoiceOver drops list semantics when `list-style: none` is set. 
+    VoiceOver drops list semantics when `list-style: none` is set.
+- The W3C CSS validator flags `container` and `@container` in the components.css
+    (lines 140 and 156). It doesn't support container queries yet. Browsers do.
 
 ## AI Disclosure
 - No AI was used

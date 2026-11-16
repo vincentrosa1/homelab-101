@@ -65,7 +65,7 @@ Photos below the first screen use `loading="lazy"`.
   hide where the setting lives. Instead, the image links to the full-size
   file, and the paragraph above it says where to click.
 
-  ## 4. Alt text and alternatives
+## 4. Alt text and alternatives
 
 | Asset | Purpose | Alt text or alternative |
 |---|---|---|
@@ -132,3 +132,35 @@ shift from a font swapping in. If I ever add a web font, it needs
 - `.video__frame` reserves 16:9 with `aspect-ratio` before the iframe
   loads.
 - The diagram has `width`, `height`, and a `viewBox`.
+
+## 9. Testing
+
+Tested on the live site in Chrome DevTools with cache disabled.
+
+- [X] 320px: one photo column, Pi shows the tall crop, no page
+    sideways scroll
+- [X] 768px: two photo columns, Pi shows the wide crop
+- [X] 1280px: intro and diagram side by side, two photo columns
+- [X] Device pixel ratio 1 vs. 2: `currentSrc` picks a bigger file at 2
+- [X] 200% zoom at 1280px: everything reflows, nothing clipped
+- [X] Slow 4G: image and video spaces hold their size while loading,
+    nothing below jumps
+- [X] Lighthouse: CLS under 0.1
+- [X] File sizes match the table above, and every page stays under 1 MB
+- [X] Alt text: WAVE or axe shows no missing-alt or empty-link errors
+- [X] Captions: CC button shows English captions on the video
+- [X] Forced colors (DevTools Rendering): diagram stays visible
+- [X] Print preview: video hidden, "Watch on YouTube" URL printed
+- [X] No GPS data in any exported image
+- [X] W3C HTML validator passes. CSS validator passes except two false
+    errors for container queries (`container` and `@container`), which
+    the validator doesn't support yet
+
+## Changed since the Module 4 inventory
+
+- The Jellyfin screenshot was replaced with the embedded video.
+- The diagram cap went from 40rem to 28rem. The vertical layout reads
+  fine at that size, and bigger just made the labels huge.
+- The Pi got two crops for art direction instead of one.
+- The screenshot ships as one 988 w file. The 640 w export was
+  bigger, so it isn't in the repo.
