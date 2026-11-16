@@ -21,7 +21,8 @@ overrides.css - temporary and environment fixes
 print.css - print only
 docs/
 refactoring-notes.md
-
+media-and-type.md - asset inventory, alt text, and Module 4 testing
+images/ - WebP photos and screenshot
 ## Layer and order strategy
 `main.css` declares the order once:
 
@@ -183,9 +184,39 @@ The old 40rem / 64rem card grid queries were removed.
 - [X] DevTools Styles shows the layer order
 - [X] W3C HTML and CSS validators pass
 
+
+## Media and typography (Module 4)
+
+Built on the Module 3 layout, with no new CSS files. Each new piece
+lives in the layer it belongs to :`.l-split` in layout, `.figure`,
+the diagram, and `.video__frame` in components, and one print rule.
+
+- **Network diagram.** Inline SVG in the intro, so it uses my color
+    tokens. It has `role="img"` and a `<title>`,
+    and the visible caption describes it in words.
+- **Hardware photos.** `srcset` and `sizes` with 480, 800, and 1200 px
+    WebP files. The Pi photo uses `<picture>` for art direction: a wide
+    4:3 crop when the grid has two columns, and a tall 4:5 crop on phones
+    so the Pi and drive dock don't get lost in the laptop stickers.
+- **Router screenshot.** One lossless WebP at its real 988px width, 16 KB.
+    No `srcset` on purpose: a 640px version came out 79 KB, so the bigger
+    file is actually the smaller one. Port and device are blacked out.
+- **Jellyfin video.** `youtube-nocookie.com`, `loading="lazy"`, a real
+    `title`, captions noted in the caption, and a link to watch on YouTube
+    if the embed is blocked.
+- **Layout stability.** Every `img` has `width` and `height`, the video
+    frame reserves 16:9 with `aspect-ratio`, and the SVG has a `viewBox`.
+- **Fonts.** Still system fonts only. No web fonts means no font 
+    requests and nothing shifts when text loads.
+
+The full asset inventory, alt text, and testing are in 
+`docs/media-and-type.md`.
+
 ## Known gaps
 
 - Nav links point to pages to be built later
+- Photos, the screenshot, and the video sit on the preview page until
+    the real Pick Your Hardware and Your First Project pages exist.
 - Table values and commands are placeholders until the real 
     Pick Your Hardware and Your First Project pages. 
 - The W3C validator warns that `role="list"` is uneccesary on `ul`. It's kept on purpose. 
