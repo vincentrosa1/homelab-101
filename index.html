@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, intitial-scale=1">
+        <title>Homelab 101 | A Beginner's Guide to Home Servers</title>
+        <meta name="description"
+            content="Learn what a homelabe is, pick starter hardware, and set up our first home server project.">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        <header class="site-header">
+            <div class="site-header__inner l-container">
+                <a class="site-header__name" href="index.html">Homelab 101</a>
+                <nav class="nav" aria-label="Primary">
+                    <ul class="nav__list" role="list">
+                        <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+                        <li><a class="nav__link" href="hardware.html">Pick Your Hardware</a></li>
+                        <li><a class="nav__link" href="projects.html">Your First Project</a></li>
+                        <li><a class="nav__link" href="safety.html">Stay Safe</a></li>
+                        <li><a class="nav__link" href="glossary.html">Glossary</a></li>
+                        <li><a class="nav__link" href="resources.html">Resources</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" class="l-container">
+            <section class="l-section" 
+            aria-labelledby="intro-title">
+            <div class="l-split">
+                <div class="u-flow">
+                    <h1 id="intro-title">Run your first home server</h1>
+                    <p class="u-measure">
+                        A homelab is a computer at home that runs services for you, like a 
+                        media server for your movies, a game server for your friends, or a
+                        backup spot for your photos. It can be an old laptop you already own.
+                    </p>
+                    <p class="u-measure">
+                        This guide takes you from picking hardware to running your first
+                        project, with the safety basics along the way. you don't need Linux
+                        or networking experience to follow along.
+                    </p>
+                    <a class="button" href="hardware.html">Pick your hardware</a>
+                </div>
+
+                <figure class="figure figure--diagram">
+                    <svg class="diagram" viewBox="0 0 400 420"
+                        width="400" height="420"
+                        role="img" aria-labelledby="net-title">
+                        <title id="net-title">How a basic home network connects</title>
+                        <rect class="diagram__zone" x="4" y="100"
+                            width="392" height="312" rx="12"/>
+                        <line class="diagram__link"
+                            x1="200" y1="64" x2="200" y2="130"/>
+                        <line class="diagram__link"
+                            x1="200" y1="186" x2="70" y2="290"/>
+                        <line class="diagram__link diagram__link--wifi"
+                            x1="200" y1="186" x2="200" y2="290"/>
+                        <line class="diagram__link diagram__link--wifi"
+                            x1="200" y1="186" x2="330" y2="290"/>
+                        <rect class="diagram__node" x="110" y="8"
+                            width="180" height="56" rx="28"/>
+                        <rect class="diagram__node diagram__node--router"
+                            x="110" y="130" width="180" height="56" rx="8"/>
+                        <rect class="diagram__node" x="12" y="290"
+                            width="116" height="56" rx="8"/>
+                        <rect class="diagram__node" x="142" y="290"
+                            width="116" height="56" rx="8"/>
+                        <rect class="diagram__node" x="272" y="290"
+                            width="116" height="56" rx="8"/>
+                        <text class="diagram__label" x="200" y="43">Internet</text>
+                        <text class="diagram__label" x="200" y="165">Router</text>
+                        <text class="diagram__label" x="70" y="325">Server</text>
+                        <text class="diagram__label" x="200" y="325">Phone</text>
+                        <text class="diagram__label" x="330" y="325">Laptop</text>
+                        <text class="diagram__label diagram__label--zone"
+                            x="200" y="392">Your private network</text>
+                    </svg>
+                    <figcaption>
+                        The internet reaches your router. The router connects to your
+                        homelab server by Ethernet (solid line) and to your phone and 
+                        laptop by Wi-Fi (dashed lines). Everything inside the dashed 
+                        box is your private network
+                    </figcaption>                    
+                </figure>
+            </div>    
+        </section>
+
+        <section class="l-section u-flow"
+        aria-labelledby="audence-title">
+        <h2 id="audience-title">Who this is for</h2>
+        <ul class="l-grid" role="list">
+            <li class="card">
+                <h3 class="card__title">Tinkerers</h3>
+                <p>
+                    You already flash firmware, change router settings, or take
+                    things apart, and you want a clear next step into running your
+                    own services.
+                </p>
+            </li>
+            <li class="card">
+                <h3 class="card__title">First-timers</h3>
+                <p>
+                    You've heard about self-hosting and want to know where to start
+                    without digging throug years of forum threads.
+                </p>
+            </li>
+        </ul>
+        </section>
+
+        <section class="l-section u-flow"
+        aria-labelledby="start-title">
+        <h2 id="start-title">Where to start</h2>
+        <ul class="l-grid l-grid--3" role="list">
+            <li class="card card--subgrid">
+                <h3 class="card__title">Pick Your Hardware</h3>
+                <p>
+                    Compare an old laptop, a mini PC, and a NAS by cost, power use, and noise.
+                </p>
+                <a class="card__link" href="hardware.html">See starter hardware</a>
+            </li>
+            <li class="card card--subgrid">
+                <h3 class="card__title">Your First Project</h3>
+                <p>
+                    Set up a media server or a game server with a step by step waklkthrough.
+                </p>
+                <a class="card__link" href="projects.html">Pick a first project</a>
+            </li>
+            <li class="card card--subgrid">
+                <h3 class="card__title">Stay Safe</h3>
+                <p>
+                    Learn the habits that protect your homelab before anything goes online.
+                </p>
+                <a class="card__link" href="safety.html">Read the safety basics</a>
+            </li>
+            <li class="card card--subgrid">
+                <h3 class="card__title">Glossary</h3>
+                <p>
+                    Look up terms like NAS, container, VM, and port forwarding.
+                </p>
+                <a class="card__link" href="glossary.html">Browse the glossary</a>
+            </li>
+            <li class="card card--subgrid">
+                <h3 class="card__title">Resources</h3>
+                <p>
+                    Truested next steps, official docs, and image credits.
+                </p>
+                <a class="card__link" href="resources.html">See resources</a>
+            </li>
+        </ul>    
+        </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-footer__inner l-container l-cluster">
+                <p>Built by Vincent Rosa</p>
+                <a href="resources.html">Resources &amp; credits</a>
+            </div>
+        </footer>
+    </body>
+</html>
