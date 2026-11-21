@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+        <title>Pick Your Hardware | Homelab 101</title>
+        <meta name="description"
+            content="Compare an old laptop, a mini PC, and a NAS for your first homelab by price, power use, and noise.">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        <header class="site-header">
+            <div class="site-header__inner l-container">
+            <a class="site-header__name" href="index.html">Homelab 101</a>
+            <nav class="nav" aria-label="Primary">
+                <ul class="nav__list" role="list">
+                    <li><a class="nav__link" href="index.html">Home</a></li>
+                    <li><a class="nav__link" href="hardware.html" aria-current="page">Pick Your Hardware</a></li>
+                    <li><a class="nav__link" href="projects.html">Your First Project</a></li>
+                    <li><a class="nav__link" href="safety.html">Stay Safe</a></li>
+                    <li><a class="nav__link" href="glossary.html">Glossary</a></li>
+                    <li><a class="nav__link" href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
+
+        <main id="main" class="l-container">
+            <section class="l-section u-flow"
+            aria-labelledby="page-title">
+            <h1 id="page-title">Pick Your Hardware</h1>
+            <p class="u-measure">
+                You don't need a server rack to start. Most first homelabs run on an
+                old laptop, a small mini PC, or a Raspberry Pi with a drive plugged in.
+                Pick the one that fits your budget, your space, and how much noise
+                you can live with.
+            </p>
+            <div class="callout u-measure">
+                <div class="callout__body">
+                <p class="callout__label">Tip</p>
+                <p>
+                    Start with what you already have. An old laptop is free, and you
+                    can move to something better once you know what you want to run.
+                </p>
+                </div>
+            </div>
+            </section>
+
+            <section class="l-section u-flow"
+            aria-labelledby="table-title">
+            <h2 id="table-title">Compare starter hardware</h2>
+            <div class="data-table">
+                <p class="data-table__hint">Scroll sideways to see every column.</p>
+                <div class="data-table__scroll" tabindex="0"
+                role="region" aria-labelledby="hw-caption">
+                <table>
+                    <caption id="hw-caption">Starter hardware (US prices, checked November 2026)</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Hardware</th>
+                        <th scope="col">Price range</th>
+                        <th scope="col">Power use</th>
+                        <th scope="col">Noise</th>
+                        <th scope="col">Best for</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Old laptop</th>
+                        <td>Free if you already own one. Refurbished business laptops run about $240 to $350.</td>
+                        <td>Low</td>
+                        <td>Quiet, with some fan noise under load</td>
+                        <td>Trying things out</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mini PC</th>
+                        <td>About $280 to $350 for an Intel N150 model with 16 GB of memory</td>
+                        <td>Low</td>
+                        <td>Quiet</td>
+                        <td>Media and game servers</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">NAS</th>
+                        <td>Raspberry Pi 5 (4 GB) board: $110, plus a case, power supply, and drive. Two-bay NAS boxes: about $340 to $400 before drives.</td>
+                        <td>Low to medium</td>
+                        <td>Drive noise</td>
+                        <td>File storage and backups</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <p class="u-measure">
+                Memory shortages pushed prices up through 2026, so check before you buy.
+                Price sources (outside sites):
+                <a href="https://www.pcworld.com/article/3087427/this-lenovo-thinkpad-with-16gb-of-ram-is-a-total-workhorse-at-240.html">PCWorld</a> and
+                <a href="https://www.notebookcheck.net/15-inch-Lenovo-ThinkPad-drops-below-350-thanks-to-massive-refurbished-discount.1305845.0.html">Notebookcheck</a>
+                for refurbished laptops (spring 2026),
+                <a href="https://computingforgeeks.com/mini-pc-prices/">ComputingForGeeks</a>
+                for mini PCs (November 2026),
+                <a href="https://www.phoronix.com/news/Raspberry-Pi-5-2GB-Price-77.50">Phoronix</a>
+                for the Raspberry Pi (October 2026), and
+                <a href="https://www.starryhope.com/nas/best-2-bay-nas/">StarryHope</a>
+                for two-bay NAS boxes (October 2026).
+            </p>
+            </section>
+
+            <section class="l-section u-flow"
+            aria-labelledby="photos-title">
+            <h2 id="photos-title">What they look like</h2>
+            <ul class="l-grid" role="list">
+                <li>
+                    <figure class="figure">
+                        <img
+                            src="images/thinkpad-t420-800.webp"
+                            srcset="images/thinkpad-t420-480.webp 480w,
+                                    images/thinkpad-t420-800.webp 800w,
+                                    images/thinkpad-t420-1200.webp 1200w"
+                            sizes="(min-width: 78rem) 35rem,
+                                   (min-width: 36rem) calc(50vw - 2.5rem),
+                                   calc(100vw - 2rem)"
+                            width="1200" height="900"
+                            alt="An older Lenovo ThinkPad T420 laptop, open and running Ubuntu Linux."
+                            loading="lazy" decoding="async">
+                        <figcaption>
+                            Old laptop tier. Photo by Sven,
+                            <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>,
+                            via <a href="https://commons.wikimedia.org/wiki/File:Lenovo_ThinkPad_T420_Ubuntu_Linux.jpeg">Wikimedia Commons</a>.
+                            Resized and converted to WebP.
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="figure">
+                        <picture>
+                            <source
+                                media="(min-width: 36rem)"
+                                srcset="images/pi-nas-wide-800.webp 800w,
+                                        images/pi-nas-wide-1200.webp 1200w"
+                                sizes="(min-width: 78rem) 35rem,
+                                       calc(50vw - 2.5rem)"
+                                width="1200" height="900">
+                            <img
+                                src="images/pi-nas-tall-800.webp"
+                                srcset="images/pi-nas-tall-480.webp 480w,
+                                        images/pi-nas-tall-800.webp 800w"
+                                sizes="calc(100vw - 2rem)"
+                                width="800" height="1000"
+                                alt="A Raspberry Pi 4 in a black case sitting on a hard drive dock that holds a 4 TB Western Digital drive."
+                                loading="lazy" decoding="async">
+                        </picture>
+                        <figcaption>
+                            NAS tier: my Raspberry Pi 4 with a 4 TB drive
+                            in a USB dock. Photo by Vincent Rosa.
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            </section>
+
+            <section class="l-section u-flow"
+            aria-labelledby="older-title">
+            <h2 id="older-title">Older gear works too</h2>
+            <p class="u-measure">
+                A media server or a small game server doesn't need much. If a computer
+                can run a current version of Ubuntu and has a wired network port (or a
+                USB-to-Ethernet adapter), it's enough to start. Plug it into the router with a cable, keep it somewhere
+                with airflow, and leave the lid open on a laptop so it doesn't overheat.
+            </p>
+            <a class="button" href="projects.html">Pick a first project</a>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-footer__inner l-container l-cluster">
+                <p>Built by Vincent Rosa</p>
+                <a href="resources.html">Resources &amp; credits</a>
+            </div>
+        </footer>
+    </body>
+</html>
