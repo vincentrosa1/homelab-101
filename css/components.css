@@ -259,6 +259,7 @@ without scrolling */
 .code-block {
     overflow-x: auto;
     padding: var(--space-s);
+    border: 1px solid transparent;
     border-radius: var(--radius-md);
     background: var(--color-code-bg);
     color: var(--color-code-text);
