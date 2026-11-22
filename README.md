@@ -1,7 +1,7 @@
 # Homelab 101
 
 A beginner's guide to building a homelab. The site has three real pages so far:
-Home, Pick Your Hardware, and Your First project. `preview.html` is the pattern
+Home, Pick Your Hardware, and Your First Project. `preview.html` is the pattern
 library that shows every component in one place.
 
 **Live site:** - https://vincentrosa1.github.io/homelab-101/ 
@@ -220,11 +220,7 @@ The full asset inventory, alt text, and testing are in
 
 ## Known gaps
 
-- Nav links point to pages to be built later
-- Photos, the screenshot, and the video sit on the preview page until
-    the real Pick Your Hardware and Your First Project pages exist.
-- Table values and commands are placeholders until the real 
-    Pick Your Hardware and Your First Project pages. 
+- Stay Safe, Glossary, and Resources aren't built yet, so their nav links don't go anywhere.
 - The W3C validator warns that `role="list"` is uneccesary on `ul`. It's kept on purpose. 
     VoiceOver drops list semantics when `list-style: none` is set.
 - The W3C CSS validator flags `container` and `@container` in the components.css
