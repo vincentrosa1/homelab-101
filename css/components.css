@@ -197,6 +197,7 @@ browsers without container queries get. */
 }
 
 .data-table__scroll {
+    container-type: inline-size;
     overflow-x: auto;
     border: var(--border);
     border-radius: var(--radius-md);
@@ -209,7 +210,12 @@ browsers without container queries get. */
     font-size: var(--step--1);
 }
 
+/* The caption stays in view and wraps to the visible width */
 .data-table caption {
+    position: sticky;
+    inset-inline-start: 0;
+    inline-size: max-content;
+    max-inline-size: 100cqi;
     padding: var(--space-xs) var(--space-s);
     font-weight: var(--weight-bold);
     text-align: start;
@@ -227,6 +233,18 @@ browsers without container queries get. */
     background: var(--color-bg);
 }
 
+
+/* Row names stay pinned on the left while the table scrolls sideways */
+.data-table thead th:first-child,
+.data-table th[scope="row"] {
+    position: sticky;
+    inset-inline-start: 0;
+    box-shadow: 1px 0 0 var(--color-border);
+}
+
+.data-table th[scope="row"] {
+    background: var(--color-surface);
+}
 /* Content-driven: hide the hint once the 36rem table fits
 without scrolling */
 
