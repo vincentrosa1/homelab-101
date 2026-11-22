@@ -26,6 +26,8 @@ print.css - print only
 docs/
 refactoring-notes.md
 media-and-type.md - asset inventory, alt text, and Module 4 testing
+accessibility-testing.md - Testing, remediation log, and conformance
+evidence/ - screenshots from testing
 images/ - WebP photos and screenshot
 
 ## Layer and order strategy
@@ -218,6 +220,25 @@ the diagram, and `.video__frame` in components, and one print rule.
 The full asset inventory, alt text, and testing are in 
 `docs/media-and-type.md`.
 
+## Accessibility (Module 5)
+
+I tested Home, Pick Your Hardware, and Your First Project against
+WCAG 2.2 AA with axe-core, keyboard only, NVDA, zoom and reflow,
+text spacing, forced colors, reduced motion, and a Firefox repeat.
+
+- **Found 6 issues and fixed 6.** The big one was the hardware table:
+    at 320px the row names scrolled away. They're pinned now.
+- **Code blocks** now have a name and role for screen readers, and
+    a border that shows in high contrast mode.
+- **The table hint** is tied to the table with `aria-describedby`,
+    and the extra region around the table is gone.
+- **axe:** 0 violations before and after. Two of the fixes were only
+    found by hand.
+
+The test scope, remediation log, and conformance summary are in
+`docs/accessibility-testing.md`. Screenshots are in `evidence/`.
+
+
 ## Known gaps
 
 - Stay Safe, Glossary, and Resources aren't built yet, so their nav links don't go anywhere.
@@ -225,6 +246,8 @@ The full asset inventory, alt text, and testing are in
     VoiceOver drops list semantics when `list-style: none` is set.
 - The W3C CSS validator flags `container` and `@container` in the components.css
     (lines 140 and 156). It doesn't support container queries yet. Browsers do.
-
+- NVDA reads the hardware table caption three times (region name, table name, caption).
+    That's normal for this table pattern.
+    
 ## AI Disclosure
 - No AI was used

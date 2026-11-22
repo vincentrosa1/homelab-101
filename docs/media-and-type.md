@@ -1,7 +1,8 @@
 # Media and typography
 
-Module 4 notes for Homelab 101. Everything here is on the preview
-page (`index.html`) until the real pages are built. 
+Module 4 notes for Homelab 101. These were built on the preview page
+first. They now live on the real pages, and the preview moved to 
+(`preview.html`) as the pattern library.  
 
 ## 1. Asset inventory
 
