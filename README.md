@@ -1,13 +1,17 @@
-# Homelab 101 - CSS Architecture Preview
+# Homelab 101
 
-The first production CSS system for Homelab 101, a beginner's guide to building a homelab.
-`index.html` is a temporary preview page that shows every pattern. Real pages will replace it later. 
+A beginner's guide to building a homelab. The site has three real pages so far:
+Home, Pick Your Hardware, and Your First project. `preview.html` is the pattern
+library that shows every component in one place.
 
-**Preview site:** - https://vincentrosa1.github.io/homelab-101/ 
+**Live site:** - https://vincentrosa1.github.io/homelab-101/ 
 
 ## File Structure
 
-index.html - temporary preview page
+index.html - Home
+hardware.html - Pick Your Hardware
+projects.html - Your First Project
+preview.html - pattern library (not in the nav)
 css/
 main.css - layer order and imports (the only linked file)
 reset.css - browser default fixes
