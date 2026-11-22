@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+        <title>Your First Project | Homelab 101</title>
+        <meta name="description"
+            content="Set up a Jellyfin media server or host a game server for friends, step by step.">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        <header class="site-header">
+            <div class="site-header__inner l-container">
+            <a class="site-header__name" href="index.html">Homelab 101</a>
+            <nav class="nav" aria-label="Primary">
+                <ul class="nav__list" role="list">
+                    <li><a class="nav__link" href="index.html">Home</a></li>
+                    <li><a class="nav__link" href="hardware.html">Pick Your Hardware</a></li>
+                    <li><a class="nav__link" href="projects.html" aria-current="page">Your First Project</a></li>
+                    <li><a class="nav__link" href="safety.html">Stay Safe</a></li>
+                    <li><a class="nav__link" href="glossary.html">Glossary</a></li>
+                    <li><a class="nav__link" href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
+
+        <main id="main" class="l-container">
+            <section class="l-section u-flow"
+            aria-labelledby="page-title">
+            <h1 id="page-title">Your First Project</h1>
+            <p class="u-measure">
+                Pick one project and finish it before starting another. The media server
+                is the easiest start. The game server adds one router change, so do it
+                second.
+            </p>
+            </section>
+
+            <div class="l-sidebar">
+                <nav class="l-sidebar__aside card" aria-label="On this page">
+                    <h2 class="card__title">On this page</h2>
+                    <ul class="u-flow" role="list" style="--flow-space: var(--space-2xs)">
+                        <li><a href="#project-media">Media server</a></li>
+                        <li><a href="#step-update">Update the system</a></li>
+                        <li><a href="#step-install">Install Jellyfin</a></li>
+                        <li><a href="#step-open">Open the dashboard</a></li>
+                        <li><a href="#project-game">Game server</a></li>
+                        <li><a href="#step-server">Install the server</a></li>
+                        <li><a href="#step-forward">Forward one port</a></li>
+                        <li><a href="#step-test">Test from outside</a></li>
+                    </ul>
+                </nav>
+
+                <div class="u-flow u-measure" style="--flow-space: var(--space-xl)">
+                <article class="u-flow">
+                    <h2 id="project-media">Media server</h2>
+                    <p>Difficulty: Easy - Time: about 1 hour</p>
+                    <p>
+                        Jellyfin is a free media server. It streams the movies, shows,
+                        and music on your server to any phone, TV, or browser in your home.
+                    </p>
+                    <div class="callout">
+                        <div class="callout__body">
+                        <p class="callout__label">Before you start</p>
+                        <p>
+                            Read <a href="safety.html">Stay Safe</a>
+                            before you open any port to the internet.
+                        </p>
+                        </div>
+                    </div>
+
+                    <ol class="u-flow">
+                        <li class="u-flow">
+                            <h3 id="step-update">Update the system</h3>
+                            <pre class="code-block" tabindex="0"><code>sudo apt update && sudo apt upgrade -y</code></pre>
+                        </li>
+                        <li class="u-flow">
+                            <h3 id="step-install">Install Jellyfin</h3>
+                            <p>
+                                Run the install script from
+                                <a href="https://jellyfin.org/docs/">official docs
+                                    <span class="u-visually-hidden"> (external site)</span>
+                                </a>
+                            </p>
+                            <pre class="code-block" tabindex="0"><code>curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash</code></pre>
+                        </li>
+                        <li class="u-flow">
+                            <h3 id="step-open">Open the dashboard</h3>
+                            <p>
+                                On another device, go to
+                                <code>http://SERVER-IP:8096</code>.
+                                Replace SERVER-IP with your server's address, then follow
+                                the setup wizard to add your first media folder.
+                            </p>
+                        </li>
+                    </ol>
+
+                    <figure class="figure video">
+                        <div class="video__frame">
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/ZDg6OG-KyoQ"
+                                title="Video: How to Set Up Jellyfin in 5 Minutes, Beginners Guide"
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="encrypted-media; picture-in-picture; fullscreen"
+                                allowfullscreen></iframe>
+                        </div>
+                        <figcaption>
+                            Optional video: setting up your first media library in
+                            Jellyfin. It's filmed on Windows, so the install looks
+                            different, but the library setup is the same. Turn on
+                            English captions with the CC button. The steps above
+                            cover the same setup.
+                            <a href="https://www.youtube.com/watch?v=ZDg6OG-KyoQ">Watch on YouTube</a>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="u-flow">
+                    <h2 id="project-game">Game server</h2>
+                    <p>Difficulty: Medium - Time: about 2 hours</p>
+                    <p>
+                        A dedicated server keeps your world online so friends can join
+                        even when you're not playing.
+                    </p>
+                    <div class="callout callout--warning">
+                        <div class="callout__body">
+                        <p class="callout__label">Warning</p>
+                        <p>
+                            Forward only the one port your game needs. Never forward your
+                            router's admin page or every port on the server.
+                        </p>
+                        </div>
+                    </div>
+
+                    <ol class="u-flow">
+                        <li class="u-flow">
+                            <h3 id="step-server">Install the server</h3>
+                            <p>
+                                Every game has its own dedicated server. Follow your game's
+                                official server guide and run it on the same machine as your
+                                media server. Write down the port and protocol (UDP or TCP)
+                                the guide lists.
+                            </p>
+                        </li>
+                        <li class="u-flow">
+                            <h3 id="step-forward">Forward one port</h3>
+                            <p>
+                                In your router's settings, give the server a reserved IP
+                                address, then forward only that one port to it. On an
+                                AT&amp;T gateway it's under Firewall, then NAT/Gaming.
+                            </p>
+                            <figure class="figure figure--screenshot">
+                                <a href="images/router-port-forward-988.webp">
+                                    <img
+                                        src="images/router-port-forward-988.webp"
+                                        width="988" height="491"
+                                        alt="NAT/Gaming page in the AT&amp;T gateway settings, showing one hosted application rule for the game server. Opens the full-size screenshot."
+                                        loading="lazy" decoding="async">
+                                </a>
+                                <figcaption>
+                                    My AT&amp;T gateway's NAT/Gaming page. The port and device
+                                    are blacked out. Screenshot by Vincent Rosa.
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="u-flow">
+                            <h3 id="step-test">Test from outside</h3>
+                            <p>
+                                Ask a friend on a different network to join with your public
+                                IP address. If they can't connect, check the server's firewall
+                                before you open anything else.
+                            </p>
+                        </li>
+                    </ol>
+                </article>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-footer__inner l-container l-cluster">
+                <p>Built by Vincent Rosa</p>
+                <a href="resources.html">Resources &amp; credits</a>
+            </div>
+        </footer>
+    </body>
+</html>
