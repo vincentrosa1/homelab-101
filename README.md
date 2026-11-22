@@ -244,10 +244,11 @@ The test scope, remediation log, and conformance summary are in
 - Stay Safe, Glossary, and Resources aren't built yet, so their nav links don't go anywhere.
 - The W3C validator warns that `role="list"` is uneccesary on `ul`. It's kept on purpose. 
     VoiceOver drops list semantics when `list-style: none` is set.
-- The W3C CSS validator flags `container` and `@container` in the components.css
-    (lines 140 and 156). It doesn't support container queries yet. Browsers do.
+- The W3C CSS validator flags `container` and `@container` , `container-type`, and `cqoi`
+    in the components.css (lines 140 156, 200, and 218). It doesn't support container 
+    queries yet. Browsers do.
 - NVDA reads the hardware table caption three times (region name, table name, caption).
     That's normal for this table pattern.
-    
+
 ## AI Disclosure
 - No AI was used

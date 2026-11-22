@@ -31,6 +31,7 @@ WCAG 2.2 AA, fixed what I found, and retested. Screenshots are in
 - The current page in the nav has `aria-current="page"`, and NVDA reads
     it as "current page".
 - The skip link goes to `#main`.
+
 Evidence: `a11y-sr-landmarks-home.png`, `a11y-sr-headings-projects.png`.
 Findings: A11Y-04, A11Y-06.
  
@@ -56,6 +57,7 @@ I tabbed through every page with the mouse put away.
 - **YouTube player:** no keyboard trap. Focus goes in and comes back
     out both ways.
 - **Firefox:** the same pass gave the same results.
+
 Evidence: `a11y-kbd-skip-link.png`, `a11y-kbd-focus-table.png`,
 `a11y-kbd-sidebar-focus.png`, `a11y-kbd-target.png`.
  
@@ -109,6 +111,7 @@ tab.
 - The button keeps its border.
 - The focus ring, the current-page underline, and the `:target`
     outline fallback all show.
+
 Evidence: `a11y-forced-colors-home.png`, `a11y-forced-colors-target.png`.
 Finding: A11Y-05.
  
@@ -122,6 +125,7 @@ the label, error, and keyboard checks.
 - `scope="col"` on the column headers and `scope="row"` on the
     hardware names
 - a focusable scroll area with `role="region"`, named by the caption
+
 NVDA reads it as "table with 4 rows and 5 columns", and it reads the
 column header before each cell.
  
@@ -186,6 +190,7 @@ screenshot what it said. I sampled:
 - link names
 - the code blocks
 - the video title
+
 **Limits:**
 - **One screen reader and one browser.** I didn't test JAWS, VoiceOver
     on Mac or iPhone, or TalkBack on Android.
@@ -305,6 +310,7 @@ Your First Project meet WCAG 2.2 AA:
 - forced colors
 - reduced motion
 - text alternatives for the diagram, photos, screenshot, and video
+
 **What was fixed.** A11Y-01 through A11Y-06, all retested.
  
 **What's limited.**
@@ -314,6 +320,12 @@ Your First Project meet WCAG 2.2 AA:
 - The YouTube player's controls are third-party, and I didn't test
     inside them.
 - Screen reader testing was NVDA with Chrome only.
+
+**What to recheck.**
+- The pinned table (A11Y-01) in Firefox.
+- The table hint (A11Y-02) with NVDA, by tabbing to the table.
+- A full pass on Stay Safe, Glossary, and Resources once they're built.
+- axe again after each module.
 
 **AI Disclosure**
 - No AI Used
