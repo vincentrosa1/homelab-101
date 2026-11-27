@@ -28,7 +28,7 @@ refactoring-notes.md
 media-and-type.md - asset inventory, alt text, and Module 4 testing
 accessibility-testing.md - Testing, remediation log, and conformance
 evidence/ - screenshots from testing
-images/ - WebP photos and screenshot
+images/ - WebP photos and screenshot, and social preview image
 
 ## Layer and order strategy
 `main.css` declares the order once:
@@ -238,6 +238,23 @@ text spacing, forced colors, reduced motion, and a Firefox repeat.
 The test scope, remediation log, and conformance summary are in
 `docs/accessibility-testing.md`. Screenshots are in `evidence/`.
 
+## Discoverability 
+
+Built on the Module 5 work, so the same headings, link text, and alt text that help screen reader users also help search engines and link previews.
+
+- **Descriptions** on each page now name what's actually on it. 
+- **Canonicals** on the three real pages. Home points to the folder
+    URL, not `index.html`.
+- **The pattern library is `noindex`**, since it repeats the real
+    pages with sample values. 
+- **Open Graph** on Home, so a shared link shows the title, 
+    description, and a 1200 x 630 photo of my Pi Nas .
+- **JSON-LD** `WebSite` on Home, matching the site name, description,
+    and footer credit that are on the page.
+- **Intro links** now connect Home, Hardware, and Projects in order. 
+
+The decisions, validation, and the ranking claims I won't make are in 
+`docs/discoverability.md`. 
 
 ## Known gaps
 
@@ -249,6 +266,12 @@ The test scope, remediation log, and conformance summary are in
     queries yet. Browsers do.
 - NVDA reads the hardware table caption three times (region name, table name, caption).
     That's normal for this table pattern.
-
+- `robots.txt`. It only works at the root of the host, and this site is in a 
+    subfolder of `vincentrosa1.github.io`, so the pattern library uses `noindex` instead.
+- No `sitemap.xml`yet. Three pages that link to each other don't need one. It will get 
+    added once the rest of the pages are built and published. 
+- The `WebSite` markup won't set the site name in Google, because Google only 
+    supports that for the home pages at the root of a domain or subdomain.
+     
 ## AI Disclosure
 - No AI was used
